@@ -612,3 +612,47 @@ textarea {
         align-items: flex-start;
     }
 }
+
+/* style.css */
+
+/* 1. Define Default Light Mode Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+}
+
+/* 2. Override Variables for Night Mode */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --btn-bg: #ffffff; 
+  --btn-text: #121212;
+  --section-band:#121212 ;
+  .section-band{
+    background-color: #121212;
+  }
+}
+
+
+/* 3. Apply variables to elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  /* Smooth transition effect when swapping themes */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.toggle-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
